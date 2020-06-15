@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}New Card{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="front">Front</label>
+    <textarea name="front" id="front">{{ request.form['front'] }}</textarea>
+    <label for="back">Back</label>
+    <textarea name="back" id="back">{{ request.form['back'] }}</textarea>
+    <input type="submit" value="Save">
+  </form>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Cards{% endblock %}</h1>
+  {% if g.user %}
+    <a class="action" href="{{ url_for('cards.create') }}">New</a>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  {% for card in cards %}
+    <div class="card">
+      <div>{{ card['front'] }}</div>
+      <div>{{ card['back'] }}</div>
+    </div>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
