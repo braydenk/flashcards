@@ -1,0 +1,21 @@
+{
+  "name": "flashy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Brayden Killeen <braydenmkilleen@gmail.com> (http://braydenkilleen.com/)",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev:server": "nodemon --config config/nodemon.json"
+  },
+  "dependencies": {
+    "express": "4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.6",
+    "@types/node": "14.0.13",
+    "nodemon": "2.0.4",
+    "ts-node": "8.10.2",
+    "typescript": "3.9.5"
+  }
+}
